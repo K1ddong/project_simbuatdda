@@ -29,7 +29,7 @@ from util import base64_to_pil
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # device 객체
 
 # pre_trained 모델 불러오기
-model_path = "model\simbuatdda.pt"
+model_path = "model/simbuatdda.pt"
 model = torch.load(model_path, map_location=device)
 
 
@@ -111,4 +111,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=5000, debug=True)
+    app.run("0.0.0.0", port=80)  # , debug=True)
